@@ -1,0 +1,214 @@
+<!-- Document Type DefinitionをHTMLに指定 -->
+<!DOCTYPE html>
+<head>
+    <!--Encoding-->
+    <meta charset="UTF-8">
+    <!--IE（Internet Explorer）を最新の状態で表示する-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!--
+    name="viewport" デバイスごとにコンテンツの表示領域を設定
+    width=device-width 表示領域の幅で、端末画面の幅に合わせる
+    initial-scale 初期のズーム倍率
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!--公開時に検索エンジンに表示されないようにする-->
+    <meta name="robots" content="noindex" />
+    <!--ウェブに表示されるタブの名前-->
+    <title>Naomi's Portfolio</title>
+    <!--rel スタイルシートを読み込む, href 読み込むCSSのパス-->
+    <!--CSS is Cascading Style Sheets -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <script>
+        // ページを離れるとき、スクロール位置を保存
+        window.addEventListener('beforeunload', function () {
+          sessionStorage.setItem('scrollY', window.scrollY);
+        });
+    
+        // ページ読み込み時、保存しておいた位置にスクロール
+        window.addEventListener('load', function () {
+          const scrollY = sessionStorage.getItem('scrollY');
+          if (scrollY !== null) {
+            window.scrollTo(0, parseInt(scrollY));
+          }
+        });
+      </script>
+
+    <!-- ヘッダー -->
+     <header>
+        <!-- <a href="index.html">Naomi's portfolio</a> -->
+        <a href="" onclick="event.preventDefault(); location.reload();" style="cursor: pointer;">Naomi's portfolio</a>
+        <nav>
+            <ul>
+                <li><a href="#about">About me</a></li>
+                <li><a href="#Uni-experiences">Univercity experiences</a></li>
+                <li><a href="#work-experience">Work experience</a></li>
+                <li><a href="#skills">Skill</a></li>
+                <li><a href="#my-research">My research</a></li>
+                <li><a href="#overseas-experience">Overseas Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+     </header>
+    <!-- メインビジュアル -->
+      <div class="main-vidual">
+        <!-- pはサブタイトル、hはメインタイトル-->
+        <div>
+            <p>Welcome to</p>
+            <h1>Naomi's portfolio site</h1>
+        </div>
+      </div>
+    <main>
+        <!-- About --> 
+            <!-- section タグとはひとまとまりであるということを表現するタグ -->
+            <section id="about">
+                <h2>-About me-</h2>
+                <div id="img-detail">
+                    <!-- <img src="/Users/sasakinaomi/Desktop/business%20portfolio/img/S__4857865.jpg?version%3D1745334205010"> -->
+                    <img src="img/IMG_6961.JPG">
+                    <div id="about-detail">
+                        <div id="about-name">
+                                <h3>佐々木 直美</h3>
+                                <h3>Sasaki Naomi</h3>
+                        </div>
+                        <p>
+                            Soka Uni/Economics/Theory and Statistics 2022/04 ~ 2027/03 (Scheduled to graduate)<br>
+                            International People's College 2025/01 ~ 2025/07 <br>
+                            I'm into Coffee, Baking, and Cooking <br>and I often hold coffee hours with professors and friends!<br>
+                            My strength is the ability to get people involved! <br>
+                        </p>
+                    </div>
+                </div>
+            </section>
+        <!-- Univercity experiences -->
+            <section id="Uni-experiences">
+                <h2>-Univercity experiences-</h2>
+                <div class="Univercity-experiences">
+                    <p>
+                        ● Asai Manabu Seminar 17th batch<br>
+                        - I learn international finance theory <br>
+                        - In-university paper presentation competition 2nd place <br>
+                        <br>
+                        ● HOPE (Honors Program in Economics) 5th batch<br>
+                        - We Started to learn Economics from intermediate level<br>
+                        - I organized a research camp<br>
+                        <br>
+                        ● Soka Economics Theory Club<br>
+                        - I worked as a Deputy manager, External relations, Accounting position<br>
+                        <br>
+                        ● United Nations Study Club<br>
+                        - I worked as a Accounting position<br>
+                        - We visited to The United Nation in New York<br>
+                        <br>
+                        ● Faculty of Economics Planning <br>
+                        - Open campus staff for Faculty booth<br>
+                        - We receive consultations from students and I made a short presentation several times as a representative of the Faculty of Economics<br>
+                        <br>
+                        ● Advanced subjects<br>
+                        - Advanced Micro/Macro Economics, Advanced Econometrics<br>
+                    </p>
+                </div>
+            </section>
+
+        <!-- Work experience -->
+            <section id="work-experience">
+            <h2>-Work experiences-</h2>
+            <div class="work-experiences">
+                <p>
+                    ● Barista since 2022/10 ~ 2024/12<br>
+                        Starbucks Barista Tall / Partner of month twice / Partner of quater once<br>
+                        <br>
+                    ● Undergraduate Teaching Assistant at Soka Univercuty<br>
+                        - Intermediate Microeconomics (2023 spring semester) <br>
+                        - Intermediate Microeconomics (2024 spring semester)<br>
+                        - Data Science (2024 fall semester)<br>
+                        - Capital markets and securities investiment (2024 fall semester)<br>
+                        <br>
+                    ● FEEL(Faculty of Economics Education Lounge) Staff at Soka Univercuty (2024 fall semester)<br>
+                        - Students can ask any questions to me For example, Economics, Studying abroad and so on
+                </p>
+                </div>
+            </section>
+
+        <!-- Skill -->
+            <section id="skills">
+            <h2>-Skills-</h2>
+                <div class="skill-list">
+
+                    <div class="skill-item">
+                        <h3>R・Python</h3>
+                        <p>I analized the data （Regression analysis and machine learning）and made a graph on my reseaches by R and Python</p>
+                    </div>
+
+                    <div class="skill-item">
+                        <h3>HTML・CSS</h3>
+                        <p>I made two websites for my portfolio by HTML and CSS</p>
+                    </div>
+
+                    <div class="skill-item">
+                        <h3>PHP・Javascript</h3>
+                        <p>I used PHP and Javascript for adding movement to the websites</p>
+                    </div>
+                    
+                </div>
+            </section>
+
+        <!-- My Research -->
+            <section id="my-research">
+            <h2>-My Research-</h2>
+                <div class="research">
+                    <p>
+                        ⚫︎ Poverty in Africa<br>
+                        ⚫︎ Encouraging students at my univercity to bring their own water bottle<br>
+                        ⚫︎ How to make exchange student at my univercity want to work in Japan<br>
+                        ⚫︎ How to make young people interested in politics especially voting <br>
+                        (Submited to an external contest by EY Japan)<br>
+                        ⚫︎ Does eating quickly lead to early death?<br>
+                        ⚫︎ About marrage rate<br>
+                        ⚫︎ The effects of Covid-19 to the industries<br>
+                    </p>
+                </div>
+            </section>
+
+        <!-- Overseas Experience -->
+            <section id="overseas-experience">
+            <h2>-Overseas Experience-</h2>
+            <p>
+                ● Language training 2023/02~ (1 month)<br>
+                    - South Illinois Univercity in United states of America for learning English<br>
+                <br>
+                ● Study abroad 2025/01~ (6 months)<br>
+                    - International People's college in Denmark for learning how to face and communicate with people all over the world<br>
+                    - I organized three events<br>
+                     Japanese dinner for 130 people, Japanese language exchange cafe for 60 students, Open mic for over 60 students<br>
+                    - I was a member of the student council as a party called Game changers<br>
+                    Student council is for making our college better and had a meeting once per a week<br>
+                    We ran the Fellowship (morning meeting) every Thrsday<br>
+                    Game changers supported students to organize Language exchange cafes and game tournaments<br>
+            </p>
+            </section>
+
+        <!-- Contact -->
+            <section id="contact">
+                <h2>-Contact-</h2>
+                <form action="https://forms.gle/zhfhpesBqVuGzm8m8" target="_self" method="POST" id="mG61Hd">
+                    <dl>
+                    <dt>お名前 Name</dt>
+                    <dd><input name="entry.{固有のid}" type="text" required="required" id="textfield" class="g_form"></dd>
+                    <dt>メールアドレス Email</dt>
+                    <dd><input name="entry.{固有のid}" type="text" class="g_form" id="textfield2"></dd>
+                    <dt>問い合わせ内容 Question</dt>
+                    <dd><textarea name="entry.{固有のid}" required class="g_form_text" id="entry.{固有のid}"></textarea></dd>
+                    </dl>
+                    <div class="button"><input type="submit" class="btbt"></div>
+                </form>
+            </section>
+    </main>
+    <!-- フッター -->
+     <footer>
+        <p>&copy; 2025 Naomi Sasaki</p>
+     </footer>
+</body>
+</html>
